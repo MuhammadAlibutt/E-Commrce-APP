@@ -1,0 +1,133 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import '../../../../main.dart';
+import '../../../bottamnav_scren.dart';
+import 'All_Products_Girl.dart';
+import 'Girl_Jacket.dart';
+import 'Girl_Other.dart';
+import 'Girl_Pent_Girl.dart';
+import 'Girl_shoos.dart';
+import 'Girls_Shorts.dart';
+import 'Shirt_Product_Girl.dart';
+
+class GirlCollection extends StatefulWidget {
+  const GirlCollection({super.key});
+
+  @override
+  State<GirlCollection> createState() => _GirlCollectionState();
+}
+
+class _GirlCollectionState extends State<GirlCollection> {
+  int _currentIndex = 0;
+
+  _onTapIndex(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        title: const Text(
+          'Girls Fashion',
+          style: TextStyle(color: Colors.black),
+        ),
+        centerTitle: true,
+        leading: IconButton(
+          onPressed: () {
+            Get.to(BottomNavBar(currentIndex: 1,));
+          },
+          icon: const Icon(Icons.arrow_back),
+          color: Colors.black,
+        ),
+        elevation: 2,
+      ),
+      body: SingleChildScrollView(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            'Categories',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          _categorybar(),
+          _currentIndex == 0
+              ? const AllGirlsProducts()
+              : _currentIndex == 1
+              ? const GirlShirtProduct()
+              : _currentIndex == 2
+              ? const GirlPantProduct()
+              : _currentIndex == 3
+              ? const GirlJacketPoduct()
+              : _currentIndex == 4
+              ? const GirlShortsProducts()
+              : _currentIndex == 5
+              ? const GirlsShoesProduct()
+              : const GirlOtherProducts()
+        ]),
+      ),
+    );
+  }
+
+  Widget _buildBarItem(int index, String label) {
+    return InkWell(
+      onTap: () {
+        _onTapIndex(index);
+      },
+      child: Column(
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              color: _currentIndex == index ? Colors.black : Colors.grey,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  _categorybar() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        //crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _buildBarItem(0, 'All'),
+          const SizedBox(
+            width: 20,
+          ),
+          _buildBarItem(1, 'Shirts'),
+          const SizedBox(
+            width: 20,
+          ),
+          _buildBarItem(2, 'Pents'),
+          const SizedBox(
+            width: 20,
+          ),
+          _buildBarItem(3, 'Jackets'),
+          const SizedBox(
+            width: 20,
+          ),
+          _buildBarItem(4, 'Shorts'),
+          const SizedBox(
+            width: 20,
+          ),
+          _buildBarItem(5, 'shoes'),
+          const SizedBox(
+            width: 20,
+          ),
+          _buildBarItem(6, 'Cap and other'),
+        ],
+      ),
+    );
+  }
+
+}

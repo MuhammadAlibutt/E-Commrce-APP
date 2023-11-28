@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "838178911486",
+    "project_id": "fashioapp-fyp",
+    "storage_bucket": "fashioapp-fyp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838178911486:android:f3e908fb4f1204021ba1af",
+        "android_client_info": {
+          "package_name": "com.example.fahioapp_fyp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-qgUwq2gZghiBwft5DXK2c2PBKWG93OA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
