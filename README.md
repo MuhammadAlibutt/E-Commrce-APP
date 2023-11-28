@@ -1,10 +1,10 @@
-# fahioapp_fyp
+t# fahioapp_fyp
 
-A new Flutter project.
+A FYP Project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a FYP -Commerce Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
 
