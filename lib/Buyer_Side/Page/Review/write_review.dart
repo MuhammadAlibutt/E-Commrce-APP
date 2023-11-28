@@ -70,7 +70,7 @@ class _WriteReviewState extends State<WriteReview> {
                     ),
                   ),
                   Positioned(
-                    left: 150,
+                    left: 170,
                     top: 40,
                     child: Text(
                       widget.itemName,
@@ -78,7 +78,7 @@ class _WriteReviewState extends State<WriteReview> {
                     ),
                   ),
                   Positioned(
-                    left: 150,
+                    left: 170,
                     top: 80,
                     child: Text(
                       widget.storeName,

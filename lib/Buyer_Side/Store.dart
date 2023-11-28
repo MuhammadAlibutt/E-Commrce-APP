@@ -2,22 +2,23 @@ import 'package:fahioapp_fyp/Buyer_Side/bottamnav_scren.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../../main.dart';
-import 'categoory_boyshoes_product.dart';
-import 'category_all_product.dart';
-import 'category_boyjacket_produc.dart';
-import 'category_boyother_product.dart';
-import 'category_boypent_productsa.dart';
-import 'category_boyshirt_product.dart';
-import 'category_boyshort_product.dart';
+import 'Page/Category/Boy_category_screens/categoory_boyshoes_product.dart';
+import 'Page/Category/Boy_category_screens/category_all_product.dart';
+import 'Page/Category/Boy_category_screens/category_boyjacket_produc.dart';
+import 'Page/Category/Boy_category_screens/category_boyother_product.dart';
+import 'Page/Category/Boy_category_screens/category_boypent_productsa.dart';
+import 'Page/Category/Boy_category_screens/category_boyshirt_product.dart';
+import 'Page/Category/Boy_category_screens/category_boyshort_product.dart';
 
-class BoyCategory extends StatefulWidget {
-  const BoyCategory({super.key});
+
+class Store extends StatefulWidget {
+  const Store({super.key});
 
   @override
-  State<BoyCategory> createState() => _BoyCategoryState();
+  State<Store> createState() => _StoreState();
 }
 
-class _BoyCategoryState extends State<BoyCategory> {
+class _StoreState extends State<Store> {
   int _currentIndex = 0;
 
   _onTapIndex(int index) {
@@ -32,13 +33,13 @@ class _BoyCategoryState extends State<BoyCategory> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         title: const Text(
-          'Boys Fashion',
+          'Outfiters',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
         leading: IconButton(
           onPressed: () {
-            Get.to(BottomNavBar(currentIndex: 1,));
+            Get.to(BottomNavBar(currentIndex: 0,));
           },
           icon: const Icon(Icons.arrow_back),
           color: Colors.black,

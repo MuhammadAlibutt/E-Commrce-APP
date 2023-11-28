@@ -40,7 +40,7 @@ class _WomenShortsProductsState extends State<WomenShortsProducts> {
               crossAxisCount: 2,
               crossAxisSpacing: 11,
               mainAxisSpacing: 11,
-              mainAxisExtent: 250),
+              mainAxisExtent: 300),
           itemCount:snapshot.data!.docs.length,
           itemBuilder: (context, index) {
             DocumentSnapshot document = snapshot.data!.docs[index];

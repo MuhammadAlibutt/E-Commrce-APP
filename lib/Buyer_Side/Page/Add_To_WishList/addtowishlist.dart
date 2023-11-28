@@ -151,7 +151,7 @@ class _AddToWishListState extends State<AddToWishList> {
                                     ),
                                     //title
                                     Positioned(
-                                      top: 150,
+                                      top: 200,
                                         left: 4,
                                         child: SizedBox(
                                          width: MediaQuery.of(context).size.width*0.4,
@@ -164,7 +164,7 @@ class _AddToWishListState extends State<AddToWishList> {
                                    //price
                                    Positioned(
                                     bottom: 20,
-                                       left: 2,
+                                       left: 4,
                                        child:
                                            Text("\$${productsData[index]['price']!}"),
                                    ),

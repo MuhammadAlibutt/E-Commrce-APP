@@ -6,9 +6,12 @@ import 'package:get/get.dart';
 import '../../../main.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
+import '../../Store.dart';
 import '../../bottamnav_scren.dart';
 import '../Add_To_WishList/addtowishlist_provider.dart';
+import '../Add_to_Cart/add_to_cart.dart';
 import '../Add_to_Cart/checkout.dart';
+import '../Chat_Modul/chat_screen.dart';
 
 class ProductDetailsController extends GetxController {
   bool checkAddToWishList = false;
@@ -350,7 +353,9 @@ class _ProductDetailState extends State<ProductDetail> {
                       padding: const EdgeInsets.only(
                           top: 8, left: 8, bottom: 8, right: 8),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(()=> Store());
+                        },
                         icon: Icon(
                           Icons.storefront,
                           size: 30,
@@ -364,7 +369,9 @@ class _ProductDetailState extends State<ProductDetail> {
                       padding: const EdgeInsets.only(
                           top: 8, bottom: 8, left: 8, right: 8),
                       child: IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Get.to(()=>BottomNavBar(currentIndex: 2,));
+                        },
                         icon: Icon(
                           Icons.chat,
                           size: 30,
@@ -383,7 +390,9 @@ class _ProductDetailState extends State<ProductDetail> {
                             size: 25,
                           ),
                           TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(()=>AddToCartPage());
+                            },
                             child: Text(
                               "Buy Now  ",
                               style: TextStyle(fontSize: 15),

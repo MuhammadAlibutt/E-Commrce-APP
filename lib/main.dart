@@ -5,6 +5,7 @@ import 'package:fahioapp_fyp/Buyer_Side/bottamnav_scren.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get.dart';
 import 'firebase_options.dart';
 
@@ -13,6 +14,8 @@ void main() async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  Stripe.publishableKey =
+  'pk_test_51OHKw4IX7xZrgGeBzNUFnGdVm9odBVOCJqaZsK8PF0DAjZhkDC4Muivz6SyPE50Uu1TwbM8Xgr5LozBy9oHtsaxp00QMyklhrn';
   runApp(const MyApp());
 }
 

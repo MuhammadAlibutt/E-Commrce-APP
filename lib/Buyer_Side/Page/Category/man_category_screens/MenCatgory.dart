@@ -48,9 +48,12 @@ class _ManCollectionState extends State<ManCollection> {
           const SizedBox(
             height: 20,
           ),
-          const Text(
-            'Categories',
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0),
+            child: const Text(
+              'Categories',
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            ),
           ),
           const SizedBox(
             height: 20,
@@ -98,7 +101,10 @@ class _ManCollectionState extends State<ManCollection> {
       child: Row(
         //crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _buildBarItem(0, 'All'),
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0),
+            child: _buildBarItem(0, 'All'),
+          ),
           const SizedBox(
             width: 20,
           ),

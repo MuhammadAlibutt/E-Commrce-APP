@@ -2,6 +2,7 @@ import 'package:fahioapp_fyp/Buyer_Side/Page/Tracking/track_order.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../Page/Cards/Card_Screen.dart';
 import '../Page/Review/toreview.dart';
 import '../bottamnav_scren.dart';
 
@@ -71,7 +72,9 @@ class _AccountScreenState extends State<AccountScreen>
                           Icons.payment,
                           size: 30,
                         ),
-                        TextButton(onPressed: () {}, child: Text("To Pay"))
+                        TextButton(onPressed: () {
+                          Get.to(()=>CardScreen());
+                        }, child: Text("To Pay"))
                       ],
                     ),
                     Column(

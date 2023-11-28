@@ -55,6 +55,7 @@ dependencies:
   velocity_x: ^4.1.2
   font_awesome_flutter: ^10.6.0
   flutter_rating_bar: ^4.0.1
+  flutter_stripe: ^9.5.0+1
 
 
 dev_dependencies:

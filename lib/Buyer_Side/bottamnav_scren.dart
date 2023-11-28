@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import 'Auth/SignUp.dart';
 import 'Auth/accoount.dart';
+import 'Notification/notification.dart';
 import 'Page/Add_To_WishList/addtowishlist.dart';
 import 'Page/Add_to_Cart/add_to_cart.dart';
 import 'Page/Category/category.dart';
@@ -61,6 +62,15 @@ class _BottomNavBarState extends State<BottomNavBar> {
                       Icons.favorite_border_outlined,
                       color: Colors.black,
                     ),
+                ),
+                IconButton(
+                  onPressed: (){
+                    Get.to(()=> NotificationScreen());
+                  },
+                  icon: Icon(
+                    Icons.notification_add,
+                    color: Colors.black,
+                  ),
                 ),
 
               ],

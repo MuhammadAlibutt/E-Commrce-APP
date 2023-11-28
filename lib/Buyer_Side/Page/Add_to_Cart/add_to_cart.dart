@@ -236,7 +236,7 @@ class _AddToCartPageState extends State<AddToCartPage> {
                                   //title
                                   Positioned(
                                       top: 30,
-                                      left: 135,
+                                      left: 155,
                                       child: SizedBox(
                                         width:
                                         MediaQuery.of(context).size.width * 0.4,
@@ -251,7 +251,7 @@ class _AddToCartPageState extends State<AddToCartPage> {
                                   //store name
                                   Positioned(
                                       top: 65,
-                                      left: 135,
+                                      left: 155,
                                       child: SizedBox(
                                         width:
                                         MediaQuery.of(context).size.width * 0.4,
@@ -265,8 +265,8 @@ class _AddToCartPageState extends State<AddToCartPage> {
 
                                   //Size
                                   Positioned(
-                                    bottom: 70,
-                                    left: 135,
+                                    top: 85,
+                                    left: 155,
                                     child: Text(
                                       "Size:${productsData[index]['size']}",
                                       style: TextStyle(fontSize: 20),
@@ -276,9 +276,9 @@ class _AddToCartPageState extends State<AddToCartPage> {
                                   //price
                                   Positioned(
                                     bottom: 45,
-                                    left: 135,
+                                    left: 155,
                                     child: Text(
-                                      "\$${productsData[index]['price']!}",
+                                      "PKR ${productsData[index]['price']!}",
                                       style: TextStyle(
                                           fontSize: 15,
                                           fontWeight: FontWeight.bold),
